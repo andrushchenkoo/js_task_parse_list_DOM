@@ -5,8 +5,8 @@ const listItems = Array.from(listCollection);
 
 const sortList = (list) => {
   const sortedList = [...list].sort((a, b) => {
-    const salaryA = a.dataset.salary.replace(/[^0-9.-]+/g, '');
-    const salaryB = b.dataset.salary.replace(/[^0-9.-]+/g, '');
+    const salaryA = +a.dataset.salary.replace(/[^0-9.-]+/g, '');
+    const salaryB = +b.dataset.salary.replace(/[^0-9.-]+/g, '');
 
     return salaryB - salaryA;
   });
